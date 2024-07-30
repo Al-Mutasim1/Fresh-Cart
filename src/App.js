@@ -7,7 +7,7 @@ import Category from './Component/Category/Category';
 import Login from './Component/Login/Login';
 import Register from './Component/Register/Register';
 import Products from './Component/Products/Products';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 import NotFound from './Component/NotFound/NotFound';
 import UserTokenProvider from './Context/UserTokenContext';
 import ProtectRouter from './Component/ProtectRouter/ProtectRouter';
@@ -22,7 +22,7 @@ import WishLists from './Component/WishLists/WishLists';
 
 
 
-const routers = createBrowserRouter([
+const routers = createHashRouter([
   {
     path: '/', element: <Layout />, children:
       [

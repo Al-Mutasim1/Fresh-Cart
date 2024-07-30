@@ -2,7 +2,7 @@
   "name": "e-commerce",
   "version": "0.1.0",
   "homepage": "https://Al-Mutasim1.github.io/Fresh-Cart",
- 
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
