@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -28,23 +28,30 @@ export default function CategorySliders() {
         autoplaySpeed: 2500 ,
         speed :500 ,
       };
+      var w = window.innerWidth;
 
-      
+        
 
 
   return <>
- 
-   <div className='my-5 w-75 mx-auto '>
-      <Slider {...settings}>
+{
+  (w > 1300)?  
+  <div className="row">
+  
+    <div className='my-5 w-75 mx-auto '>
+        <Slider {...settings}>
+         
+         {data?.data.data.map((category , key) =>  
+         <div key={key}>
+            <img style={{width:'100%', height:'300px' }} src={ category.image } alt="Slider" />
+            <h4 className='mt-2 text-center'>{category.name}</h4>
+          </div> )}
        
-       {data?.data.data.map((category , key) =>  
-       <div key={key}>
-          <img style={{width:'100%', height:'300px' }} src={ category.image } alt="Slider" />
-          <h4 className='mt-2 text-center'>{category.name}</h4>
-        </div> )}
-     
-      </Slider>
-    </div>
+        </Slider>
+      </div>
+  
+  </div>:''
+}
   
   
   </>

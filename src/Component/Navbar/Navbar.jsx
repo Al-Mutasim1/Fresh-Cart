@@ -30,35 +30,39 @@ export default function Navbar() {
 
 
   return <>
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg  bg-body-tertiary">
       <div className="container">
-        <Link className="navbar-brand fs-2 fw-bold main-color" to="/">
+        <Link className="fs-2 fw-bold main-color" to="/">
           <img src={logo} alt="" />
         </Link>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <div className=" navbar-brand   " id="">
+        <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon "></span>
+         </button>
+         <div className="collapse navbar-collapse " id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
             {(token !== null) ?
               <> <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="">Home</Link>
               </li>
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="brands">Brands</Link>
+                  <Link className="nav-link "  to="brands">Brands</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="cart">Cart</Link>
+                  <Link className="nav-link "  to="cart">Cart</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link " aria-current="page" to="category#">Category</Link>
+                  <Link className="nav-link "  to="category#">Category</Link>
                 </li>  
                 <li className="nav-item me-5">
-                  <Link className="nav-link " aria-current="page" to="wishlists">Wishlist <i className="fa-solid  text-danger fa-heart"></i>  </Link>
+                  <Link className="nav-link "  to="wishlists">Wishlist <i className="fa-solid  text-danger fa-heart"></i>  </Link>
                 </li>
              
            
 
                 <li className="nav-item ">
-                  <Link className="nav-link  " aria-current="page" to="cart">
+                  <Link className="nav-link  "  to="cart">
                     <button type="button" className="btn btn-primary position-relative ">
                       <i className="fas fa-shopping-cart "></i>
                       <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-main">
@@ -75,7 +79,7 @@ export default function Navbar() {
 
 
 
-                <li className="nav-item ms-5">
+                <li className="nav-item ms-lg-5">
                   <span className="nav-link " >
                     <button className='btn btn-outline-info  '><Link className='text-dark' to={'/profile'}>Profile</Link></button>
                   </span>
@@ -103,7 +107,7 @@ export default function Navbar() {
             }
 
           </ul>
-
+          </div>
         </div>
       </div>
     </nav>
